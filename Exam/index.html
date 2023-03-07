@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      defer
+      src="https://kit.fontawesome.com/276ffb3fcd.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <div class="app-icon">
+            <i class="fa-brands fa-slack"></i>
+          </div>
+        </div>
+        <ul class="sidebar-list">
+          <li class="sidebar-list-item">
+            <a href="#">
+              <i class="fa-solid fa-house"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="sidebar-list-item active">
+            <a href="#">
+              <i class="fa-solid fa-shopping-bag"></i>
+              <span>Products</span>
+            </a>
+          </li>
+
+          <li class="sidebar-list-item">
+            <a href="./users.html">
+              <i class="fa-solid fa-user"></i>
+              <span>Users</span>
+            </a>
+          </li>
+        </ul>
+        <div class="account-info">
+          <div class="account-info-picture">
+            <img
+              src="https://images.unsplash.com/photo-1527736947477-2790e28f3443?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE2fHx3b21hbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"
+              alt="Account"
+            />
+          </div>
+          <div class="account-info-name">Monica G.</div>
+          <button class="account-info-more">
+            <i class="fa-solid fa-ellipsis"></i>
+          </button>
+        </div>
+      </div>
+      <div class="app-content">
+        <div class="app-content-header">
+          <h1 class="app-content-headerText">Products</h1>
+          <button class="mode-switch" title="Switch Theme">
+            <i class="fa-regular fa-moon"></i>
+          </button>
+          <button class="app-content-btn">Add Product</button>
+        </div>
+        <div class="app-content-actions">
+          <input class="search-bar" placeholder="Search..." type="text" />
+          <div class="app-content-actions-wrapper">
+            <div class="filter-button-wrapper">
+              <button class="action-button filter jsFilter">
+                <span>Filter</span><i class="fa-solid fa-filter"></i>
+              </button>
+              <div class="filter-menu">
+                <label>Category</label>
+                <select>
+                  <option>All Categories</option>
+                  <option>Furniture</option>
+                  <option>Decoration</option>
+                  <option>Kitchen</option>
+                  <option>Bathroom</option>
+                </select>
+                <label>Status</label>
+                <select>
+                  <option>All Status</option>
+                  <option>Active</option>
+                  <option>Disabled</option>
+                </select>
+                <div class="filter-menu-buttons">
+                  <button class="filter-button reset">Reset</button>
+                  <button class="filter-button apply">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="products-area-wrapper tableView">
+          <div class="modal__wrapper">
+            <div class="modal__content">
+              <h2>Are you sure to delete this product?</h2>
+              <div class="button__wrapper">
+                <button type="reset" class="cancel-btn">Cancel</button>
+                <button type="button" class="delete-btn">Delete</button>
+              </div>
+            </div>
+          </div>
+          <div class="add-modal__wrapper">
+            <div class="add-product-modal">
+              <input
+                class="product__title"
+                type="text"
+                placeholder="Product title"
+              />
+              <input
+                class="product__price"
+                type="number"
+                placeholder="Product price"
+              />
+              <input
+                class="product__desc"
+                type="text"
+                placeholder="Product description"
+              />
+              <input
+                class="product__img"
+                type="text"
+                placeholder="Product images"
+              />
+              <div class="button__wrapper">
+                <button type="reset" class="cancel-btn">Cancel</button>
+                <button type="button" class="add-btn">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="products"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="update__modal">
+      <div class="update__modal__content">
+        <input class="update__title" type="text" placeholder="Product title" />
+        <input
+          class="update__price"
+          type="number"
+          min="0"
+          placeholder="Product price"
+        />
+
+        <div class="button__wrapper">
+          <button class="cancel-btn">Cancel</button>
+          <button class="update-btn">Update</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
